@@ -5,7 +5,7 @@ let package = Package(
     name: "MIHCrypto",
     platforms: [
         .iOS(.v12),
-        .macOS(.v10_17)
+        .macOS(.v10_15)
     ],
     products: [
         .library(
