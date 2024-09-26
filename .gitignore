@@ -24,3 +24,5 @@ Pods/
 #
 .idea/
 atlassian-ide-plugin.xml
+.build/
+.DS_Store

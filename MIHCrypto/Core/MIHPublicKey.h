@@ -1,3 +1,6 @@
+#import <Foundation/Foundation.h>
+
+
 //
 // Copyright (C) 2014 Michael Hohl <http://www.michaelhohl.net/>
 //

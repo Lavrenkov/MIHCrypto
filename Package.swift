@@ -25,11 +25,12 @@ let package = Package(
             name: "MIHCryptoCore",
             dependencies: [.product(name: "OpenSSL", package: "OpenSSL")],
             path: "MIHCrypto/Core",
-            sources: ["."],
+            sources: [".", "../Utils"],
             publicHeadersPath: ".",
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath(".")
+                .headerSearchPath("."),
+                .headerSearchPath("../Utils")
             ],
             linkerSettings: [
                 .unsafeFlags(["-L${PODS_ROOT}/OpenSSL-Universal/lib-ios"])
@@ -39,43 +40,72 @@ let package = Package(
             name: "MIHCryptoMathematics",
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/Mathematics",
-            sources: ["."]
+            sources: ["."],
+            cSettings: [
+                .define("LIBRESSL"),
+                .headerSearchPath("../Utils")
+            ]
+
         ),
         .target(
             name: "MIHCryptoAES",
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/AES",
-            sources: ["."]
+            sources: ["."],
+            cSettings: [
+                .define("LIBRESSL"),
+                .headerSearchPath("../Utils")
+            ]
         ),
         .target(
             name: "MIHCryptoDES",
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/DES",
-            sources: ["."]
+            sources: ["."],
+            cSettings: [
+                .define("LIBRESSL"),
+                .headerSearchPath("../Utils")
+            ]
         ),
         .target(
             name: "MIHCryptoEC",
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/EC",
-            sources: ["."]
+            sources: ["."],
+            cSettings: [
+                .define("LIBRESSL"),
+                .headerSearchPath("../Utils")
+            ]
         ),
         .target(
             name: "MIHCryptoMD5",
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/MD5",
-            sources: ["."]
+            sources: ["."],
+            cSettings: [
+                .define("LIBRESSL"),
+                .headerSearchPath("../Utils")
+            ]
         ),
         .target(
             name: "MIHCryptoRSA",
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/RSA",
-            sources: ["."]
+            sources: ["."],
+            cSettings: [
+                .define("LIBRESSL"),
+                .headerSearchPath("../Utils")
+            ]
         ),
         .target(
             name: "MIHCryptoSHA",
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/SHA",
-            sources: ["."]
+            sources: ["."],
+            cSettings: [
+                .define("LIBRESSL"),
+                .headerSearchPath("../Utils")
+            ]
         )
     ],
     swiftLanguageVersions: [.v5]

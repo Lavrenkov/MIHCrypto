@@ -1,3 +1,6 @@
+#import <Foundation/Foundation.h>
+
+
 //
 //  MIHECCurveGroup.h
 //  MIHCrypto
