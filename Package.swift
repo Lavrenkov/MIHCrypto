@@ -26,11 +26,11 @@ let package = Package(
             dependencies: [.product(name: "OpenSSL", package: "OpenSSL")],
             path: "MIHCrypto/Core",
             sources: [".", "../Utils"],
-            publicHeadersPath: ".",
+            publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath("."),
-                .headerSearchPath("../Utils")
+                .headerSearchPath("include/MIHCrypto"),  // Updated
+                .headerSearchPath("../Utils/include/MIHCrypto")  // Updated
             ],
             linkerSettings: [
                 .unsafeFlags(["-L${PODS_ROOT}/OpenSSL-Universal/lib-ios"])
@@ -41,20 +41,25 @@ let package = Package(
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/Mathematics",
             sources: ["."],
+            publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath("../Utils")
+                .headerSearchPath("../Utils/include/MIHCrypto"),
+                .headerSearchPath("include/MIHCrypto"),
+                .headerSearchPath("../Core/include/MIHCrypto")
             ]
-
         ),
         .target(
             name: "MIHCryptoAES",
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/AES",
             sources: ["."],
+            publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath("../Utils")
+                .headerSearchPath("../Utils/include/MIHCrypto"),
+                .headerSearchPath("include/MIHCrypto"),
+                .headerSearchPath("../Core/include/MIHCrypto")
             ]
         ),
         .target(
@@ -62,9 +67,12 @@ let package = Package(
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/DES",
             sources: ["."],
+            publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath("../Utils")
+                .headerSearchPath("../Utils/include/MIHCrypto") ,
+                .headerSearchPath("include/MIHCrypto"),
+                .headerSearchPath("../Core/include/MIHCrypto")
             ]
         ),
         .target(
@@ -72,9 +80,12 @@ let package = Package(
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/EC",
             sources: ["."],
+            publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath("../Utils")
+                .headerSearchPath("../Utils/include/MIHCrypto"),
+                .headerSearchPath("include/MIHCrypto"),
+                .headerSearchPath("../Core/include/MIHCrypto")
             ]
         ),
         .target(
@@ -82,9 +93,12 @@ let package = Package(
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/MD5",
             sources: ["."],
+            publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath("../Utils")
+                .headerSearchPath("../Utils/include/MIHCrypto"),
+                .headerSearchPath("include/MIHCrypto"),
+                .headerSearchPath("../Core/include/MIHCrypto")
             ]
         ),
         .target(
@@ -92,9 +106,12 @@ let package = Package(
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/RSA",
             sources: ["."],
+            publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath("../Utils")
+                .headerSearchPath("../Utils/include/MIHCrypto") ,
+                .headerSearchPath("include/MIHCrypto"),
+                .headerSearchPath("../Core/include/MIHCrypto")
             ]
         ),
         .target(
@@ -102,11 +119,15 @@ let package = Package(
             dependencies: ["MIHCryptoCore"],
             path: "MIHCrypto/SHA",
             sources: ["."],
+            publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
-                .headerSearchPath("../Utils")
+                .headerSearchPath("../Utils/include/MIHCrypto"),
+                .headerSearchPath("include/MIHCrypto"),
+                .headerSearchPath("../Core/include/MIHCrypto")
             ]
         )
+
     ],
     swiftLanguageVersions: [.v5]
 )
