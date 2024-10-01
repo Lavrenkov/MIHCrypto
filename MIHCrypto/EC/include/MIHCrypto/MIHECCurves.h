@@ -10,7 +10,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHECObject.h>
+#else
 #import "MIHECObject.h"
+#endif
 
 @interface MIHECCurve : MIHECObject// <NSCopying>
 @property (copy, nonatomic, readonly) NSNumber *identifier;

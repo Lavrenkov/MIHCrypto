@@ -9,9 +9,21 @@
 //  Copyright © 2018 Michael Hohl. All rights reserved.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHECObject.h>
+#else
 #import "MIHECObject.h"
+#endif
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHEC.h>
+#else
 #import "MIHEC.h"
+#endif
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHCoding.h>
+#else
 #import "MIHCoding.h"
+#endif
 
 @interface MIHECSignature : MIHECObject
 @property (assign, nonatomic, readonly) ECDSA_SIG *signature;

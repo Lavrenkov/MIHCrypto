@@ -18,7 +18,11 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHRSAPrivateKey.h>
+#else
 #import "MIHRSAPrivateKey.h"
+#endif
 #include <OpenSSL/OpenSSL.h>
 /**
  * These category on MIHRSAPrivateKey contains an initializer which should only get used by MIHRSAKeyFactory.

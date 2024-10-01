@@ -18,7 +18,11 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHCoding.h>
+#else
 #import "MIHCoding.h"
+#endif
 
 /**
  * Protocol for classes which represent a private key. Private keys can get used to decrypt cipher data and to sign

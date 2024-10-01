@@ -18,7 +18,11 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHBigInteger.h>
+#else
 #import "MIHBigInteger.h"
+#endif
 /**
  *  Stores range utilising MIHBigInteger. Similar to NSRange, but without any limitation in the size of integers.
  *

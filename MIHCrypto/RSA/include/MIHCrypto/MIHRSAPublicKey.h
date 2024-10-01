@@ -19,7 +19,11 @@
 //
 
 #include <OpenSSL/OpenSSL.h>
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHPublicKey.h>
+#else
 #import "MIHPublicKey.h"
+#endif
 
 /**
  * Implementation of MIHRSAPublicKey which represents a public RSA key.

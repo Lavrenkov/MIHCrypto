@@ -18,8 +18,16 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHDESKey.h>
+#else
 #import "MIHDESKey.h"
+#endif
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHDESKeyFactory.h>
+#else
 #import "MIHDESKeyFactory.h"
+#endif
 #import <OpenSSL/OpenSSL.h>
 
 /**

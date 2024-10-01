@@ -9,7 +9,11 @@
 //  Copyright © 2018 Michael Hohl. All rights reserved.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHECObject.h>
+#else
 #import "MIHECObject.h"
+#endif
 
 @class MIHKeyPair;
 @class MIHECCurve;

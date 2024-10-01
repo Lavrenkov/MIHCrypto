@@ -18,7 +18,11 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHHashAlgorithm.h>
+#else
 #import "MIHHashAlgorithm.h"
+#endif
 
 /**
  * MD5 implementation for MIHHashAlgorithm.

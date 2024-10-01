@@ -29,6 +29,7 @@ let package = Package(
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
+                .define("SWIFTPM"),
                 .headerSearchPath("include/MIHCrypto"),  // Updated
                 .headerSearchPath("../Utils/include/MIHCrypto")  // Updated
             ],
@@ -44,6 +45,7 @@ let package = Package(
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
+                .define("SWIFTPM"),
                 .headerSearchPath("../Utils/include/MIHCrypto"),
                 .headerSearchPath("include/MIHCrypto"),
                 .headerSearchPath("../Core/include/MIHCrypto")
@@ -57,6 +59,7 @@ let package = Package(
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
+                .define("SWIFTPM"),
                 .headerSearchPath("../Utils/include/MIHCrypto"),
                 .headerSearchPath("include/MIHCrypto"),
                 .headerSearchPath("../Core/include/MIHCrypto")
@@ -70,6 +73,7 @@ let package = Package(
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
+                .define("SWIFTPM"),
                 .headerSearchPath("../Utils/include/MIHCrypto") ,
                 .headerSearchPath("include/MIHCrypto"),
                 .headerSearchPath("../Core/include/MIHCrypto")
@@ -83,6 +87,7 @@ let package = Package(
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
+                .define("SWIFTPM"),
                 .headerSearchPath("../Utils/include/MIHCrypto"),
                 .headerSearchPath("include/MIHCrypto"),
                 .headerSearchPath("../Core/include/MIHCrypto")
@@ -96,6 +101,7 @@ let package = Package(
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
+                .define("SWIFTPM"),
                 .headerSearchPath("../Utils/include/MIHCrypto"),
                 .headerSearchPath("include/MIHCrypto"),
                 .headerSearchPath("../Core/include/MIHCrypto")
@@ -109,6 +115,7 @@ let package = Package(
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
+                .define("SWIFTPM"),
                 .headerSearchPath("../Utils/include/MIHCrypto") ,
                 .headerSearchPath("include/MIHCrypto"),
                 .headerSearchPath("../Core/include/MIHCrypto")
@@ -122,6 +129,7 @@ let package = Package(
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
+                .define("SWIFTPM"),
                 .headerSearchPath("../Utils/include/MIHCrypto"),
                 .headerSearchPath("include/MIHCrypto"),
                 .headerSearchPath("../Core/include/MIHCrypto")

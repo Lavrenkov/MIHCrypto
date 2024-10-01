@@ -18,7 +18,11 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHSymmetricKey.h>
+#else
 #import "MIHSymmetricKey.h"
+#endif
 
 /**
  * MIHSymmetricKey implementation which is based on AES in CBC mode.

@@ -18,7 +18,11 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHBigInteger.h>
+#else
 #import "MIHBigInteger.h"
+#endif
 
 /**
  *  These category on MIHBigInteger contains adds the ability to load MIHBigInteger from an OpenSSL BIGNUM.

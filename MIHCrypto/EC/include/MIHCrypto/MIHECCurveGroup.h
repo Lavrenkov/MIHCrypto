@@ -20,8 +20,16 @@
  
  y^2 + xy = x^3 + ax^2 + b (where b != 0)
  */
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHEC.h>
+#else
 #import "MIHEC.h"
+#endif
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHECCurves.h>
+#else
 #import "MIHECCurves.h"
+#endif
 
 @interface MIHECCurveGroupFieldTypes : NSObject
 @property (copy, nonatomic, readonly, class) NSString *primeField;

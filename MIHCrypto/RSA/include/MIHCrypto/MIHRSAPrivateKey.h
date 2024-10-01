@@ -19,7 +19,11 @@
 //
 
 #include <OpenSSL/OpenSSL.h>
+#ifndef SWIFTPM
+#import <MIHCrypto/MIHPrivateKey.h>
+#else
 #import "MIHPrivateKey.h"
+#endif
 
 /**
  * Implementation of MIHPrivateKey which represents a private RSA key.
