@@ -120,22 +120,7 @@ let package = Package(
                 .headerSearchPath("include/MIHCrypto"),
                 .headerSearchPath("../Core/include/MIHCrypto")
             ]
-        ),
-        .target(
-            name: "MIHCryptoSHA",
-            dependencies: ["MIHCryptoCore"],
-            path: "MIHCrypto/SHA",
-            sources: ["."],
-            publicHeadersPath: "include",  // Updated
-            cSettings: [
-                .define("LIBRESSL"),
-                .define("SWIFTPM"),
-                .headerSearchPath("../Utils/include/MIHCrypto"),
-                .headerSearchPath("include/MIHCrypto"),
-                .headerSearchPath("../Core/include/MIHCrypto")
-            ]
         )
-
     ],
     swiftLanguageVersions: [.v5]
 )
