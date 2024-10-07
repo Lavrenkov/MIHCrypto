@@ -25,7 +25,6 @@ let package = Package(
             name: "MIHCryptoCore",
             dependencies: [.product(name: "OpenSSL", package: "OpenSSL")],
             path: "MIHCrypto/Core",
-            sources: [".", "../Utils"],
             publicHeadersPath: "include",  // Updated
             cSettings: [
                 .define("LIBRESSL"),
