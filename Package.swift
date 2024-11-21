@@ -18,7 +18,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", .revision("8cb1d641ab5ebce2cd7cf31c93baef07bed672d4"))
+        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", .revision("8729614a93e6b20307db3c3359aed81f030facaa"))
     ],
     targets: [
         .target(
